@@ -167,9 +167,6 @@ void execute_command(struct command* cmd, int* status){
         return;
     }
     if (fork_pid == 0){
-        // pid_t myPID = getpid();
-        // printf("We are the child process\n");
-        // printf("The fork gave me a PID %d, but my PID is %d", fork_pid, myPID);
         if (!cmd->is_bg) {
             struct sigaction sa_default;
             sa_default.sa_handler = SIG_DFL;
