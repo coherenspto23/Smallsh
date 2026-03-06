@@ -23,13 +23,6 @@ struct command{
     char* outputf;
     bool  is_bg;            // Check if file is bg
 };
-
-// struct sigaction{            Example of sigaction struct
-//     void (*sa_handler)(int);
-//   sigset_t sa_mask;
-//   int sa_flags;
-//   void (*sa_sigaction)(int, siginfo_t*, void*);
-// } 
 // Prototype func
 
 void print_prompt(void);
@@ -291,8 +284,6 @@ void handle_SIGTSTP(int signo){
         foreground_only_mode = 0;
     }
 }
-
-
 
 
 bool is_comment_or_blank(char* input){
